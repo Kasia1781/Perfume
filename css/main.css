@@ -1,0 +1,110 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-color: hsl(30deg, 38%, 92%);
+}
+
+.card {
+  width: 342px;
+  height: 615px;
+  border-radius: 10px;
+  background-color: hsl(0deg, 0%, 100%);
+}
+.card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.card__body {
+  margin: 20px;
+}
+.card__title-first {
+  font-size: 14px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: hsl(228deg, 12%, 48%);
+}
+.card__title-second {
+  margin-bottom: 15px;
+  font-family: "Fraunces";
+  line-height: 30px;
+}
+.card__text {
+  font-size: 14px;
+  line-height: 25px;
+  color: hsl(228deg, 12%, 48%);
+  margin-bottom: 15px;
+}
+.card__price {
+  display: flex;
+}
+.card__btn {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 15px 5px;
+  bottom: 5px;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 14px;
+  font-weight: 700;
+  background-color: hsl(158deg, 36%, 37%);
+  border-radius: 10px;
+  border: none;
+}
+
+.price__first {
+  font-size: 30px;
+  color: hsl(158deg, 36%, 37%);
+  margin: 0 20px 20px 0;
+  font-weight: 700;
+  font-family: "Fraunces";
+}
+.price__second {
+  font-size: 14px;
+  margin-top: 10px;
+  color: hsl(228deg, 12%, 48%);
+  text-decoration: line-through;
+}
+
+@media (min-width: 772px) {
+  .card {
+    display: flex;
+    width: 600px;
+    height: 450px;
+  }
+  .card__img img {
+    width: 300px;
+    height: 450px;
+    background-image: url("/img/image-product-desktop.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+  }
+  .card__body {
+    margin: 30px;
+  }
+  .card__btn {
+    top: 10px;
+    cursor: pointer;
+  }
+  .card__btn:hover {
+    background-color: hsl(212deg, 21%, 14%);
+  }
+  .price__first {
+    margin: 10px 20px 20px 0;
+  }
+  .price__second {
+    margin-top: 20px;
+  }
+}/*# sourceMappingURL=main.css.map */
