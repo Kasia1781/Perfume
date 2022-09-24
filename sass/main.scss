@@ -19,17 +19,15 @@ body {
 
 .card {
 	width: 342px;
-	height: 615px;
+	// height: 615px;
 	border-radius: 10px;
 	background-color: $white-color;
 
-	img {
-		width: 100%;
+	&__img-mobile {
+		background-image: url('/img/image-product-mobile.jpg');			
+		background-size: cover;
+		height: 250px;
 		border-radius: 10px 10px 0 0;
-	}
-
-	&__img-desktop {
-		display: none;
 	}
 
 	&__body {
@@ -59,12 +57,15 @@ body {
 
 	&__price {
 		display: flex;
+		align-items: center;
+		gap: 20px;
 	}
 
 	&__btn {
-		position: relative;
+		// position: relative;
 		width: 100%;
 		text-align: center;
+		margin-top: 20px;
 		padding: 15px 5px;
 		bottom: 5px;
 
@@ -81,28 +82,16 @@ body {
 	&__first {
 		font-size: 30px;
 		color: $main-color;
-		margin: 0 20px 20px 0;
+		// margin: 0 20px 20px 0;
 		font-weight: 700;
 		font-family: 'Fraunces';
 	}
 
 	&__second {
 		font-size: 14px;
-		margin-top: 10px;
+		// margin-top: 10px;
 		color: $dark-grayish-blue;
 		text-decoration: line-through;
-	}
-}
-
-@media (min-width: 575px) {
-	.card {
-		&__img-mobile {
-
-			img {
-				display: none;
-			}
-		}
-
 	}
 }
 
@@ -112,23 +101,19 @@ body {
 		width: 600px;
 		height: 450px;
 
-		&__img-desktop {
+		&__img-mobile {
 			display: inline;
-			width: 300px;
+			flex: 1;
 			height: 450px;
-
-			img {
-				width: 300px;
-				height: 450px;
-				// background-image: url('/img/image-product-desktop.jpg');
-				background-position: center;
-				background-size: cover;
-				border-radius: 10px 0 0 10px;
-			}
+			background-image: url('/img/image-product-desktop.jpg');
+			background-position: center;
+			background-size: cover;
+			border-radius: 10px 0 0 10px;
 		}
 
 		&__body {
 			margin: 30px;
+			flex: 1;
 		}
 
 		&__btn {
@@ -140,14 +125,14 @@ body {
 			}
 		}
 
-		.price {
-			&__first {
-				margin: 10px 20px 20px 0;
-			}
+	// 	.price {
+	// 		&__first {
+	// 			margin: 10px 20px 20px 0;
+	// 		}
 
-			&__second {
-				margin-top: 20px;
-			}
-		}
+	// 		&__second {
+	// 			margin-top: 20px;
+	// 		}
+	// 	}
 	}
 }

@@ -17,16 +17,14 @@ body {
 
 .card {
   width: 342px;
-  height: 615px;
   border-radius: 10px;
   background-color: hsl(0deg, 0%, 100%);
 }
-.card img {
-  width: 100%;
+.card__img-mobile {
+  background-image: url("/img/image-product-mobile.jpg");
+  background-size: cover;
+  height: 250px;
   border-radius: 10px 10px 0 0;
-}
-.card__img-desktop {
-  display: none;
 }
 .card__body {
   margin: 20px;
@@ -51,11 +49,13 @@ body {
 }
 .card__price {
   display: flex;
+  align-items: center;
+  gap: 20px;
 }
 .card__btn {
-  position: relative;
   width: 100%;
   text-align: center;
+  margin-top: 20px;
   padding: 15px 5px;
   bottom: 5px;
   color: hsl(0deg, 0%, 100%);
@@ -69,42 +69,33 @@ body {
 .price__first {
   font-size: 30px;
   color: hsl(158deg, 36%, 37%);
-  margin: 0 20px 20px 0;
   font-weight: 700;
   font-family: "Fraunces";
 }
 .price__second {
   font-size: 14px;
-  margin-top: 10px;
   color: hsl(228deg, 12%, 48%);
   text-decoration: line-through;
 }
 
-@media (min-width: 575px) {
-  .card__img-mobile img {
-    display: none;
-  }
-}
 @media (min-width: 575px) {
   .card {
     display: flex;
     width: 600px;
     height: 450px;
   }
-  .card__img-desktop {
+  .card__img-mobile {
     display: inline;
-    width: 300px;
+    flex: 1;
     height: 450px;
-  }
-  .card__img-desktop img {
-    width: 300px;
-    height: 450px;
+    background-image: url("/img/image-product-desktop.jpg");
     background-position: center;
     background-size: cover;
     border-radius: 10px 0 0 10px;
   }
   .card__body {
     margin: 30px;
+    flex: 1;
   }
   .card__btn {
     top: 10px;
@@ -112,11 +103,5 @@ body {
   }
   .card__btn:hover {
     background-color: hsl(212deg, 21%, 14%);
-  }
-  .card .price__first {
-    margin: 10px 20px 20px 0;
-  }
-  .card .price__second {
-    margin-top: 20px;
   }
 }/*# sourceMappingURL=main.css.map */
